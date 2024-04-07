@@ -1,0 +1,25 @@
+{
+  "name": "rism-syntax",
+  "displayName": "rism syntax",
+  "description": "Systax highlighter for '.rism'",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "rism-syntax",
+      "aliases": ["rism", "rism-syntax"],
+      "extensions": ["rism"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "rism-syntax",
+      "scopeName": "rism",
+      "path": "./syntaxes/rism-syntax.tmLanguage.json"
+    }]
+  }
+}
