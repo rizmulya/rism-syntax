@@ -9,16 +9,24 @@
   "categories": [
     "Programming Languages"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rizmulya/rism-syntax"
+  },
+  "icon": "icons/code.png",
+  "author": "rizmulya",
+  "publisher": "rizmulya",
+  "license": "MIT",
   "contributes": {
     "languages": [{
       "id": "rism-syntax",
-      "aliases": ["rism", "rism-syntax"],
+      "aliases": ["rism", "rism-syntax", "rism-highlighter"],
       "extensions": ["rism"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
       "language": "rism-syntax",
-      "scopeName": "rism",
+      "scopeName": "source.rism",
       "path": "./syntaxes/rism-syntax.tmLanguage.json"
     }]
   }

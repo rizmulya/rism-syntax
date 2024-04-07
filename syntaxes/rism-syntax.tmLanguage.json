@@ -1,32 +1,65 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "rism",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.rism-syntax",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.rism-syntax",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.rism-syntax",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "rism"
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "rism",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#variables"
+        },
+        {
+            "include": "#logic-blocks"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.block.jinja2",
+                    "begin": "{#",
+                    "end": "#}"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "variable.inline.jinja2",
+                    "begin": "{{",
+                    "end": "}}"
+                }
+            ]
+        },
+        "logic-blocks": {
+            "patterns": [
+                {
+                    "name": "logic.block.jinja2",
+                    "begin": "{%",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.block.begin.jinja2"
+                        }
+                    },
+                    "end": "%}",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.block.end.jinja2"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "name": "variable.other.general.jinja2",
+                            "match": "(?!\\b(if|for|endif|endfor)\\b)[^\\{%\\}%]+"
+                        },
+                        {
+                            "name": "keyword.control.jinja2",
+                            "match": "\\b(if|for|endif|endfor)\\b"
+                        }
+                    ]
+                }
+            ]
+        }      
+    },
+    "scopeName": "source.rism"
 }
