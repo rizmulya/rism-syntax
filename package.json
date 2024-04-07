@@ -2,7 +2,7 @@
   "name": "rism-syntax",
   "displayName": "rism syntax",
   "description": "Systax highlighter for '.rism'",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.88.0"
   },
@@ -22,7 +22,11 @@
       "id": "rism-syntax",
       "aliases": ["rism", "rism-syntax", "rism-highlighter"],
       "extensions": ["rism"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./icons/copy.png",
+        "dark": "./icons/copy.png"
+      }
     }],
     "grammars": [{
       "language": "rism-syntax",
