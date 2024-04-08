@@ -1,9 +1,14 @@
 # Change Log
 
-All notable changes to the "rism-syntax" extension will be documented in this file.
+## [0.0.1]
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Initial Release
+- Add syntax highlighter
 
-## [Unreleased]
+## [0.0.2]
 
-- Initial release
+- Add icon
+
+## [0.0.3]
+
+- Add auto complete

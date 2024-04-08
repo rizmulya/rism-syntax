@@ -12,8 +12,11 @@
     ],
     // symbols that are auto closed when typing
     "autoClosingPairs": [
-        ["{{", "}}"],
-        ["{%", "%}"],
+        ["{{", " }}"],
+        ["{%", " %}"],
+        ["{% if", " %} {% endif %}"],
+        ["{% ifel", " %} {% else %} {% endif %}"],
+        ["{% for", " %} {% endfor %}"],
         ["\"", "\""],
         ["'", "'"]
     ],

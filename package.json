@@ -1,8 +1,8 @@
 {
   "name": "rism-syntax",
   "displayName": "rism syntax",
-  "description": "Systax highlighter for '.rism'",
-  "version": "0.0.2",
+  "description": "Auto complete and Syntax highlighter for '.rism''",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.88.0"
   },
